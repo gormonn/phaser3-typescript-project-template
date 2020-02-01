@@ -1,4 +1,5 @@
 import 'phaser';
+import Game from './main/Game'
 
 namespace App {
     // game
@@ -6,7 +7,8 @@ namespace App {
 }
 
 function launch(): void {
-    let game = new Main.Game();
+    // let game = new Main.Game();
+    let game = new Game();
     App.game = game;
 }
 
