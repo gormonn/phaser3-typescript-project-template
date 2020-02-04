@@ -40,7 +40,7 @@ export default {
         resolve({
             extensions: [ '.ts', '.tsx' ]
         }),
-
+        
         //  We need to convert the Phaser 3 CJS modules into a format Rollup can use:
         commonjs({
             namedExports: {
