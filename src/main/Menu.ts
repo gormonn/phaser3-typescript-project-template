@@ -23,6 +23,7 @@ export default class Menu extends SceneBase {
             this.bench = new GLBenchClass(this.game.context);
             console.log('Моник вкл')
         }else{
+            // todo: добавить монитор для канваса
             console.log('Моник выкл')
         }
 

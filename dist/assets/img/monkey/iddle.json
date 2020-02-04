@@ -1,0 +1,209 @@
+{
+	"textures": [
+		{
+			"image": "iddle.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1674,
+				"h": 107
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "monkey_iddle-0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 186,
+						"h": 107
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					}
+				},
+				{
+					"filename": "monkey_iddle-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 186,
+						"h": 107
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					},
+					"frame": {
+						"x": 186,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					}
+				},
+				{
+					"filename": "monkey_iddle-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 186,
+						"h": 107
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					},
+					"frame": {
+						"x": 372,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					}
+				},
+				{
+					"filename": "monkey_iddle-3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 186,
+						"h": 107
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					},
+					"frame": {
+						"x": 558,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					}
+				},
+				{
+					"filename": "monkey_iddle-4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 186,
+						"h": 107
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					},
+					"frame": {
+						"x": 744,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					}
+				},
+				{
+					"filename": "monkey_iddle-5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 186,
+						"h": 107
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					},
+					"frame": {
+						"x": 930,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					}
+				},
+				{
+					"filename": "monkey_iddle-6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 186,
+						"h": 107
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					},
+					"frame": {
+						"x": 1116,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					}
+				},
+				{
+					"filename": "monkey_iddle-7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 186,
+						"h": 107
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					},
+					"frame": {
+						"x": 1302,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					}
+				},
+				{
+					"filename": "monkey_iddle-8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 186,
+						"h": 107
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					},
+					"frame": {
+						"x": 1488,
+						"y": 0,
+						"w": 186,
+						"h": 107
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:5562858ce5a6fd204cc6fcb3cbe45ce2:5ba51651b28a2ddd84b27dd58063908f:049f057a13763504d062bdc950aaff21$"
+	}
+}

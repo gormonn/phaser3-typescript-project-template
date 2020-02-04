@@ -1,7 +1,7 @@
 const gameConfig:Phaser.Types.Core.GameConfig = {
     type: Phaser.AUTO,
     parent: "game_content",
-    width: 800,
+    width: 800 + 160,
     height: 600,
     title: "Game Title"
 }

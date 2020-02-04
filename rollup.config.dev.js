@@ -3,6 +3,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import serve from 'rollup-plugin-serve';
 import typescript from 'rollup-plugin-typescript2';
+import livereload from 'rollup-plugin-livereload';
 
 export default {
 
@@ -22,9 +23,9 @@ export default {
         sourcemap: true,
         intro: 'var global = window;'
     },
-
+    treeshake:false,
     plugins: [
-
+        livereload(),
         //  Toggle the booleans here to enable / disable Phaser 3 features:
         replace({
             'typeof CANVAS_RENDERER': JSON.stringify(true),
@@ -42,7 +43,13 @@ export default {
 
         //  We need to convert the Phaser 3 CJS modules into a format Rollup can use:
         commonjs({
+            namedExports: {
+                'node_modules/lodash/lodash.js': [
+                    'get'
+                ]
+            },
             include: [
+                'node_modules/lodash/*',
                 'node_modules/eventemitter3/**',
                 'node_modules/phaser/**',
                 'src/main/*',
@@ -51,6 +58,7 @@ export default {
                 'node_modules/phaser/src/polyfills/requestAnimationFrame.js'
             ],
             sourceMap: true,
+            // sourceMap: false,
             ignoreGlobal: true
         }),
 
