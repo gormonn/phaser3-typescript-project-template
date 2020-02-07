@@ -121,14 +121,23 @@ export default class MainScene extends Phaser.Scene {
             col.anims.play(imgKey);
             col.mask = new Phaser.Display.Masks.GeometryMask(this, reelMask);
         }
+        const imgSize = 42;
         const addRows = (left, top, imgKey) => {
-            const margin = 42 * 3 + 5;
+            const margin = imgSize * 3 + 5;
             addRow(left, top, imgKey, 0);
             addRow(left, top+margin, imgKey, 1);
             addRow(left, top+margin*2, imgKey, 2);
             addRow(left, top+margin*3, imgKey, 2);
         }
-        addRows(200,175,IMG.REEL.SYMBOLS);
+        const addCols = (left, top, imgKey) => {
+            const margin = imgSize * 3 + 14;
+            addRows(left, top, imgKey);
+            addRows(left+margin, top, imgKey);
+            addRows(left+margin*2, top, imgKey);
+            addRows(left+margin*3, top, imgKey);
+            addRows(left+margin*4, top, imgKey);
+        }
+        addCols(200,175,IMG.REEL.SYMBOLS);
     }
 
     createMonkeyAnimation(){
