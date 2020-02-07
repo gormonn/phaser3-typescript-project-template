@@ -81,55 +81,12 @@ export default class MainScene extends Phaser.Scene {
         this.createBackground();
         this.createLabels();
         this.createLineNumbers();
-        this.createMonkeyAnimation();
+        this.createReels();
+        this.createMonkeyAnimation();        
 
-        // const rect = new Phaser.GameObjects.Graphics(this, { x: 200, y: 175 });
-        // // const rect = this.add.graphics({ x: 200, y: 175 });
-        // rect.lineStyle(5, 0xFF00FF, 1.0);
-        // rect.fillStyle(0xFFFFFF, 1.0);
-        // rect.fillRect(50, 50, 400, 200);
-        // rect.strokeRect(50, 50, 400, 200);
-        // // this.add.
-        // const mask = new Phaser.Display.Masks.GeometryMask(this, rect);
-        // this.add.existing(mask);
-
-        
 
         // new GetCoordinates(this, IMG.REEL.SYMBOLS);
-
-        this.anims.create({
-            key: IMG.REEL.SYMBOLS,
-            frames: this.anims.generateFrameNumbers(IMG.REEL.SYMBOLS, { start: 0, end: 8, first: 0 }),
-            frameRate: 10,
-            repeat: -1
-        });
         
-        // drawStar(shape, 0, 0, 5, 100, 100 / 2, 0xffff00, 0xff0000);
-        // swirl.mask = new Phaser.Display.Masks.GeometryMask(this, shape);
-
-        // Анимация колонок
-        const addRow = (left, top, imgKey, startFrame) => {
-            let col = this.add.sprite(left, top, IMG.REEL.SYMBOLS, startFrame);
-            col.anims.play(IMG.REEL.SYMBOLS);
-            // col.mask = new Phaser.Display.Masks.GeometryMask(this, shape);
-        }
-        const addRows = (left, top, imgKey) => {
-            const margin = 42 * 3 + 5;
-            addRow(left, top, imgKey, 0);
-            addRow(left, top+margin, imgKey, 1);
-            addRow(left, top+margin*2, imgKey, 2);
-            addRow(left, top+margin*3, imgKey, 2);
-        }
-        addRows(200,175,IMG.REEL.SYMBOLS);
-
-        var shape = this.make.graphics({x: 90, y: 57}, true);
-        shape.lineStyle(1, 0xFF00FF, 1.0);
-        shape.strokeRect(0, 0, 600, 400);
-        // shape.
-
-        
-
-
         // this.tweens.add({
         //     targets: logo,
         //     y: 350,
@@ -148,6 +105,31 @@ export default class MainScene extends Phaser.Scene {
         this.bench && this.bench.nextFrame(time);
     }
     
+    createReels(){
+        this.anims.create({
+            key: IMG.REEL.SYMBOLS,
+            frames: this.anims.generateFrameNumbers(IMG.REEL.SYMBOLS, { start: 0, end: 8, first: 0 }),
+            frameRate: 10,
+            repeat: -1
+        });
+
+        const reelMask = this.make.graphics({x: 140, y: 110}, false).fillRect(0, 0, 700, 400);
+
+        // Анимация колонок
+        const addRow = (left, top, imgKey, startFrame) => {
+            let col = this.add.sprite(left, top, imgKey, startFrame);
+            col.anims.play(imgKey);
+            col.mask = new Phaser.Display.Masks.GeometryMask(this, reelMask);
+        }
+        const addRows = (left, top, imgKey) => {
+            const margin = 42 * 3 + 5;
+            addRow(left, top, imgKey, 0);
+            addRow(left, top+margin, imgKey, 1);
+            addRow(left, top+margin*2, imgKey, 2);
+            addRow(left, top+margin*3, imgKey, 2);
+        }
+        addRows(200,175,IMG.REEL.SYMBOLS);
+    }
 
     createMonkeyAnimation(){
         // Анимация обезьяны
